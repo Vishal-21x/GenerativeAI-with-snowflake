@@ -102,30 +102,6 @@ Support Tickets (CSV)
 
 ---
 
-## Files
-
-- `load_support_tickets.ipynb` - Data ingestion (Snowflake staging + table creation)
-- `finetuning_mistral_7b.ipynb` - End-to-end pipeline (classification → fine-tuning → inference → UI)
-
----
-
-## Usage
-
-```python
-# Quick inference with fine-tuned model
-response = session.sql(f"""
-  SELECT snowflake.cortex.complete(
-    'SUPPORT_MESSAGES_FINETUNED_MISTRAL_7B',
-    CONCAT('{prompt}', request, ticket_category, contact_preference)
-  ) AS response
-  FROM support_tickets
-""").to_pandas()
-```
-
-**Streamlit UI**: Select customer request + preference + LLM model → real-time response generation
-
----
-
 ## Future Work
 
 - [ ] Experiment with **LoRA-based fine-tuning** for parameter efficiency
