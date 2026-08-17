@@ -101,10 +101,3 @@ Support Tickets (CSV)
 4. **Latency-Accuracy Pareto**: Fine-tuned 7B achieves Mistral Large accuracy at 3x speed and 1/13 cost
 
 ---
-
-## Future Work
-
-- [ ] Experiment with **LoRA-based fine-tuning** for parameter efficiency
-- [ ] A/B test fine-tuned model vs. Mistral Large in production
-- [ ] Extend to **multi-language support** (Spanish, French roaming ticket patterns)
-- [ ] Implement **response ranking/reranking** for top-K beam search diversity
